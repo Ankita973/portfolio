@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+body {
+        background-color: rgb(14, 7, 60);
+        color: white;
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0;
+    }
+nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+        background: rgba(4, 4, 119, 0.85);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 10px 10px;
+    }
+.left {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+.right ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+.right ul li {
+        font-size: 1.1rem;
+        padding: 8px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+.right ul li:hover {
+        background: #fff;
+        color: #1e215d;
+    }
+.section {
+        display: none;
+        padding: 40px 20px;
+    }
+.section.active {
+        display: block;
+    }
+    #home.section.active {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+    }
+    .lefthome {
+        width: 50%;
+        float: left;
+        padding: 20px;
+        font-size: 3rem;
+    }
+    .righthome {
+        width: 50%;
+        float: right;
+        padding: 20px;
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
+.name {
+    animation: colorchange 2s infinite linear;
+    font-weight: bold;
+}
+
+@keyframes colorchange {
+    0%   { color: #f43e1e; }
+    25%  { color: #f0f63b; }
+    50%  { color: #29f347; }
+    75%  { color: #38a1db; }
+    100% { color: #f84323; }
+}
+#element {
+    color: rgb(184, 184, 227);
+    font-weight: bold;
+}
+.aboutbox {
+    background: rgba(30,33,93,0.7);
+    padding: 2em 2em 1em 2em;
+    border-radius: 18px;
+    margin: 20px auto 0 auto;
+    max-width: 700px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.skills {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff401e;
+    margin: 32px 0 10px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.skillbox {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto 2em auto;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+
+.skillcard {
+    background: rgba(56,161,219,0.10);
+    border-radius: 14px;
+    padding: 1.5em 2em;
+    flex: 1 1 320px;
+    max-width: 400px;
+    min-width: 260px;
+    box-shadow: 0 2px 8px rgba(56,161,219,0.08);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1.5px solid #38a1db;
+}
+
+.skillcard h3 {
+    text-align: center;
+    color: #f0f63b;
+    margin-top: 0;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+.skillcard:nth-child(2) h3 {
+    color: #38a1db;
+}
+.skillcard ul {
+    padding-left: 1.2em;
+    margin: 0;
+}
+.skillcard li {
+    margin-bottom: 1em;
+    line-height: 1.5;
+    list-style: disc;
+}
+.skillcard li:last-child {
+    margin-bottom: 0;
+}
+.skillcard strong {
+    color: #f0f63b;
+}
+.skillcard:nth-child(2) strong {
+    color: #38a1db;
+}
+.skillcard p {
+    margin: 0.2em 0 0.5em 0;
+    font-size: 0.98em;
+    color: #e0e0e0;
+}
+
+@media (max-width: 900px) {
+    .skillbox {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="left">Ankita's Portfolio</div>
+           <div class="right">
+            <ul id="navList">
+                <li class="active" data-section="home">home</li>
+                <li data-section="about">about</li>
+                <li data-section="projects">projects</li>
+                <li data-section="contact">contact</li>
+                <li data-section="hobby">hobbies</li>
+            </ul>
+           </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section active">
+           <div class="lefthome">
+            <h1>Hi I'm <span class="name"> Ankita </span></h1>
+            <p>I'm A</p>
+            <span id="element"></span>
+
+        </div>
+           <div class="righthome">
+            <img src="female-web-developer-working-on-project-5691620-4759502.webp" alt="Ankita's Image">
+        </div>
+        </section>
+        <section id="about" class="section">
+            <h1 style="text-align:center; color:#38a1db; margin-bottom: 0.5em;">About Me</h1>
+            <div class="aboutbox">
+                <p style="font-size:1.15em; line-height:1.7;">
+                    Hi, I'm <span style="color:#f43e1e; font-weight:bold;">Ankita</span>. I'm passionate about <span style="color:#f0f63b;">web development</span> and <span style="color:#29f347;">design</span>.<br>
+                    <strong style="color:#38a1db;">Background:</strong> I have a background in Computer Science and have worked on several web projects using modern technologies.<br>
+                    I love creating beautiful, responsive, and user-friendly websites.
+                </p>
+                
+            </div>
+            <div class="skills"><span style="color:#ff401e; font-weight:bold;font-size: xx-large;">Skills</span></div>
+            <div class="skillbox">
+    <div class="skillcard">
+        <h3>Hard Skills</h3>
+        <ul>
+            <li>
+                <strong>HTML</strong>
+                <p>Proficient in creating semantic and accessible HTML structures.</p>
+            </li>
+            <li>
+                <strong>CSS</strong>
+                <p>Experienced in styling websites with modern CSS techniques, including Flexbox and Grid.</p>
+            </li>
+            <li>
+                <strong>JavaScript</strong>
+                <p>Skilled in writing clean and efficient JavaScript code for dynamic web applications.</p>
+            </li>
+            <li>
+                <strong>React.js</strong>
+                <p>Familiar with building interactive user interfaces using React.js and its ecosystem.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="skillcard">
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>
+                <strong>Communication</strong>
+                <p>Strong verbal and written communication skills, able to collaborate effectively with teams.</p>
+            </li>
+            <li>
+                <strong>Problem Solving</strong>
+                <p>Excellent problem-solving abilities, with a focus on finding efficient solutions.</p>
+            </li>
+            <li>
+                <strong>Time Management</strong>
+                <p>Skilled in managing time effectively to meet project deadlines.</p>
+            </li>
+            <li>
+                <strong>Creativity</strong>
+                <p>Creative thinker with a passion for designing intuitive and engaging user experiences.</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </section>
+        <section id="projects" class="section">
+            <h1 style="text-align:center; color:#38a1db; margin-bottom: 0.5em;">Projects</h1>
+    <div style="display:flex; flex-wrap:wrap; gap:32px; justify-content:center; margin-top:2em;">
+        <!-- Project 1 -->
+        <div style="background:rgba(56,161,219,0.10); border-radius:14px; box-shadow:0 2px 8px rgba(56,161,219,0.08); padding:1.5em 2em; min-width:260px; max-width:340px; color:#fff; border:1.5px solid #38a1db; transition:transform 0.3s; animation: fadeInSection 1s;">
+            <h3 style="color:#f0f63b; margin-top:0;">Portfolio Website</h3>
+            <p style="color:#e0e0e0;">A personal portfolio website to showcase my skills, projects, and contact information. Built with HTML, CSS, and JavaScript.</p>
+            <a href="#" style="color:#38a1db; text-decoration:underline;" target="_blank">View Project</a>
+        </div>
+        <!-- Project 2 -->
+        <div style="background:rgba(56,161,219,0.10); border-radius:14px; box-shadow:0 2px 8px rgba(56,161,219,0.08); padding:1.5em 2em; min-width:260px; max-width:340px; color:#fff; border:1.5px solid #38a1db; transition:transform 0.3s; animation: fadeInSection 1.2s;">
+            <h3 style="color:#f0f63b; margin-top:0;">Amazon-Clone</h3>
+            <p style="color:#e0e0e0;">A Amazon look a like UI design Built with HTML and CSS.</p>
+            <a href="https://github.com/Ankita973/amazon-clone" style="color:#38a1db; text-decoration:underline;" target="_blank">View Project</a>
+        </div>
+        <!-- Project 3 -->
+        <div style="background:rgba(56,161,219,0.10); border-radius:14px; box-shadow:0 2px 8px rgba(56,161,219,0.08); padding:1.5em 2em; min-width:260px; max-width:340px; color:#fff; border:1.5px solid #38a1db; transition:transform 0.3s; animation: fadeInSection 1.4s;">
+            <h3 style="color:#f0f63b; margin-top:0;">To-Do List App</h3>
+            <p style="color:#e0e0e0;">A simple and elegant to-do list app to manage daily tasks. Features add, delete, and mark as complete. Built with React.</p>
+            <a href="https://github.com/Ankita973/TO-DO-LIST" style="color:#38a1db; text-decoration:underline;" target="_blank">View Project </a>
+        </div>
+    </div>
+        </section>
+        <section id="contact" class="section">
+            <h1 style="text-align:center; color:#38a1db; margin-bottom: 0.5em;">Contact</h1>
+    <div style="max-width:400px; margin:0 auto; background:rgba(30,33,93,0.7); border-radius:14px; padding:2em; box-shadow:0 2px 8px rgba(56,161,219,0.08); color:#fff;">
+        <p style="text-align:center; font-size:1.1em;">
+            Feel free to reach out to me!
+        </p>
+        <ul style="list-style:none; padding:0; margin:1.5em 0 0 0; font-size:1em;">
+            <li style="margin-bottom:1em;">
+                <strong>Email:</strong>
+                <a href="mailto:ankitadey459@gmail.com" style="color:#f0f63b; text-decoration:none;">ankitadey459@gmail.com</a>
+            </li>
+            <li style="margin-bottom:1em;">
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/ankita-dey-30526a28a" target="_blank" style="color:#38a1db; text-decoration:none;">https://www.linkedin.com/in/ankita-dey-30526a28a</a>
+            </li>
+            <li>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Ankita973" target="_blank" style="color:#f43e1e; text-decoration:none;">https://github.com/Ankita973</a>
+            </li>
+        </ul>
+    </div>
+        </section>
+                </section>
+        <!-- Hobby Section Start -->
+        <section id="hobby" class="section">
+            <h1 style="text-align:center; color:#38a1db; margin-bottom: 0.5em;">Hobbies</h1>
+            <div style="max-width:500px; margin:0 auto; background:rgba(30,33,93,0.7); border-radius:14px; padding:2em; box-shadow:0 2px 8px rgba(56,161,219,0.08); color:#fff;">
+                <ul style="list-style:none; padding:0; margin:0; font-size:1.1em;">
+                    <li style="margin-bottom:1.2em;">
+                        <strong style="color:#f0f63b;">Creativity</strong>
+                        <p style="margin:0.2em 0 0 0; color:#e0e0e0;">I love exploring new ideas and expressing myself through various creative outlets.</p>
+                    </li>
+                    <li style="margin-bottom:1.2em;">
+                        <strong style="color:#38a1db;">Art</strong>
+                        <p style="margin:0.2em 0 0 0; color:#e0e0e0;">Drawing and painting are my favorite ways to relax and bring imagination to life.</p>
+                    </li>
+                    <li>
+                        <strong style="color:#f43e1e;">Dance</strong>
+                        <p style="margin:0.2em 0 0 0; color:#e0e0e0;">Dancing helps me stay active and express emotions through movement and rhythm.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Hobby Section End -->
+        <section id="contact" class="section">
+    </main>
+    <script>
+        const navItems = document.querySelectorAll('#navList li');
+        const sections = document.querySelectorAll('.section');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navItems.forEach(i => i.classList.remove('active'));
+                sections.forEach(sec => sec.classList.remove('active'));
+                item.classList.add('active');
+                document.getElementById(item.getAttribute('data-section')).classList.add('active');
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var typed = new Typed('#element', {
+                strings: ["Web Developer", "Frontend developer", "Artist"],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true,
+                showCursor: true,
+                smartBackspace: false 
+            });
+        });
+    </script>
+</body>
+</html>
